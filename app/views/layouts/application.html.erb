@@ -4,10 +4,12 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Ruby on Rails Tutorial Sample App | <%= @title %></title>
+	<title><%= title %></title>
 	<meta name="author" content="Ankur Shah">
 	<!-- Date: 2010-11-03 -->
     <%= csrf_meta_tag %>
+	<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+	<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
 </head>
 <body>
     <%= yield %>
