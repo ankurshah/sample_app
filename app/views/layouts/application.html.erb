@@ -2,16 +2,18 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title><%= title %></title>
-	<meta name="author" content="Ankur Shah">
-	<!-- Date: 2010-11-03 -->
+  <head>
+    <title><%= title %></title>
     <%= csrf_meta_tag %>
-	<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-	<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-</head>
-<body>
-    <%= yield %>
-</body>
+    <%= render 'layouts/stylesheets' %>
+  </head>
+  <body>
+    <div class="container">
+      <%= render 'layouts/header' %>
+      <section class="round">
+        <%= yield %>
+      </section>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>
